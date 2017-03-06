@@ -126,14 +126,13 @@ export default class App extends Component {
             onEndReached={this.onEndReached}
             automaticallyAdjustContentInsets={false}
             keyboardDismissMode="on-drag"
-            keyboardShouldPersistTaps={true}
+            keyboardShouldPersistTaps={"always"}
             showsVerticalScrollIndicator={false}
           />
         }
       </View>
     );
   }
-
 }
 
 const styles = StyleSheet.create({
