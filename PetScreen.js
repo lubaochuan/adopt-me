@@ -52,11 +52,8 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   petImage: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    bottom: 0,
-    right: 0,
+    flex: 1,
+    resizeMode: "contain",
   },
   noImage: {
     flex: 1,
