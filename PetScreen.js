@@ -18,6 +18,7 @@ export default class PetScreen extends Component {
     const image = getImage(pet);
     const url = `https://www.petfinder.com/petdetail/${pet.id}`;
     return (
+      <View style={{flex: 1}}>
       <ScrollView contentContainerStyle={styles.contentContainer}>
         <View style={styles.imageContainer}>
           {image
@@ -38,6 +39,7 @@ export default class PetScreen extends Component {
           </Text>
         </View>
       </ScrollView>
+      </View>
     );
   }
 

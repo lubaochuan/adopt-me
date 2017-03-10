@@ -6,11 +6,11 @@ import {
   BackAndroid,
   Navigator,
   StyleSheet,
-  ToolbarAndroid,
   View,
 } from 'react-native';
 import App from './App';
 import PetScreen from './PetScreen';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 let _navigator;
 BackAndroid.addEventListener('hardwareBackPress', () => {
@@ -30,12 +30,13 @@ const RouteMapper = function(route, navigationOperations, onComponentRef) {
   } else if (route.name === 'pet') {
     return (
       <View style={{flex: 1}}>
-        <ToolbarAndroid
-          actions={[]}
+        <Icon.ToolbarAndroid
+          navIconName="md-arrow-back"
           onIconClicked={navigationOperations.pop}
           style={styles.toolbar}
           titleColor="white"
-          title={route.pet.name} />
+          title={route.pet.name}
+          overflowIconName="md-more"/>
         <PetScreen
           style={{flex: 1}}
           navigator={navigationOperations}
